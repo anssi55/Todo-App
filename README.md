@@ -1,6 +1,8 @@
 # Todo-App
 Good old todo-application to set remainders for your daily life.
 
+This version contains only backend-part of the app.
+
 
 GET | parameters|POST| parameters 
 ------------ | ------------ | ------- | -----
@@ -10,5 +12,5 @@ GET | parameters|POST| parameters
 
 PUT | parameters|delete| parameters 
 ------------ | ------------ | ------- | ----
-/task (Update task by id)  | id | /task | id                                                                                                                                                     
+/task (Update task by id)  | id | /task (delete by id) | id                                                                                                                                                     
 
