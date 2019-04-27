@@ -14,14 +14,14 @@ In the /Todo-App/backend folder run:
 `node backend.js`
 
 ### Database configuration file
-In order to database work, you have to fill missing information in config.json found in /inno-aviation/backend
+In order to database work, you have to fill missing information in config.json found in /Todo-App/backend
 
 
 ## Rest-api calls
 
 GET | parameters|returns |POST| parameters 
 ------------ | ------------ | ------- | ----- | ---
-/tasks (Gets all tasks)  |  | {id, task, done} | /tasks | {task, done}                                                                                                                                                     
+/tasks (Gets all tasks)  |  | {id, task, done} | /tasks (add new task) | {task, done}                                                                                                                                                     
 /task (get task by id) | id | {id, task, done} | |
 
 
