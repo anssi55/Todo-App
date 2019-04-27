@@ -3,6 +3,8 @@ Good old todo-application to set remainders for your daily life.
 
 This version contains only backend-part of the app.
 
+Backend have been build by using node.js express framework
+
 ## Installation
 
 In the /Todo-App/backend folder run:  
