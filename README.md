@@ -19,10 +19,10 @@ In order to database work, you have to fill missing information in config.json f
 
 ## Rest-api calls
 
-GET | parameters|POST| parameters 
------------- | ------------ | ------- | -----
-/tasks (Gets all tasks)  |  | /tasks | {task, done}                                                                                                                                                     
-/task (get task by id) | id |  |
+GET | parameters|returns |POST| parameters 
+------------ | ------------ | ------- | ----- | ---
+/tasks (Gets all tasks)  |  | {id, task, done} /tasks | {task, done}                                                                                                                                                     
+/task (get task by id) | id | {id, task, done} | |
 
 
 PUT | parameters|delete| parameters 
