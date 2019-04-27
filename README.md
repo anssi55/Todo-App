@@ -5,12 +5,12 @@ This version contains only backend-part of the app.
 
 ## Installation
 
-In the /inno-aviation/backend folder run:  
+In the /Todo-App/backend folder run:  
 `npm install`
 
 ## Running the app
 
-In the /inno-aviation/backend folder run:  
+In the /Todo-App/backend folder run:  
 `node backend.js`
 
 ### Database configuration file
