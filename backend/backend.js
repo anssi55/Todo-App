@@ -35,7 +35,6 @@ app.get('/tasks', function(req, res, next)  {
 //Gets spesific task indentified by id
 app.get('/task', function(req, res, next)  {
     var id = req.query.id;
-    console.log(id);
     con.query("SELECT * FROM tasks WHERE id = ?", [id], function (err, results) {
         if (err) console.log(err);
         res.json(results);
