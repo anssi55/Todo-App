@@ -1,8 +1,8 @@
 {
     "db": {
-    "user"     : "hieno",
-    "password" : "sovellus55!!",
-    "database" : "todo",
+    "user"     : "",
+    "password" : "",
+    "database" : "",
     "host"     : ""
 }
 }
