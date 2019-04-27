@@ -1,8 +1,8 @@
 {
     "db": {
-    "user"     : "",
-    "password" : "",
-    "database" : "",
-    "host"     : ""
+    "user"     : "hieno",
+    "password" : "sovellus55!!",
+    "database" : "todo",
+    "host"     : "peruna.asuscomm.com"
 }
 }
