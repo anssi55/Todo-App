@@ -21,7 +21,7 @@ In order to database work, you have to fill missing information in config.json f
 
 GET | parameters|returns |POST| parameters 
 ------------ | ------------ | ------- | ----- | ---
-/tasks (Gets all tasks)  |  | {id, task, done} | /tasks (add new task) | {task, done}                                                                                                                                                     
+/tasks (Gets all tasks)  |  | {id, task, done} | /tasks (add new task) | task, done                                                                                                                                                     
 /task (get task by id) | id | {id, task, done} | |
 
 
