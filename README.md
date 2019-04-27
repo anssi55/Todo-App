@@ -7,7 +7,7 @@ Backend have been build by using node.js express framework
 
 ## Installation
 
-In the /Todo-App/backend folder run:  
+In the /Todo-App folder run:  
 `npm install`
 
 ## Running the app
