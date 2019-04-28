@@ -21,13 +21,19 @@ In order to database work, you have to fill missing information in config.json f
 
 ## Rest-api calls
 
-GET | parameters|returns |POST| parameters 
------------- | ------------ | ------- | ----- | ---
-/tasks (Gets all tasks)  |  | {id, task, done} | /tasks (add new task) | task, done                                                                                                                                                     
-/task (get task by id) | id | {id, task, done} | |
+Description |GET  |returns 
+------------ | ------------ | ------- 
+Get all tasks | v1/tasks   |   {id, task, done}                                                                                                                                                     
+Get task by id | v1/tasks/:id   | {id, task, done} 
 
+Description |POST| parameters 
+------- | ------- |--- 
+Add new task | v1/tasks/:id | task, done 
 
-PUT | parameters|delete| parameters 
------------- | ------------ | ------- | ----
-/task (Update task by id)  | id | /task (delete by id) | id                                                                                                                                                     
+Description | PUT  
+------------ | ---------
+Update task by id | v1/tasks/:id   
 
+Description | DELETE 
+------- | ---- 
+Delete by id | v1/tasks/:id 
