@@ -69,8 +69,8 @@ app.post('/v1/tasks', function(req, res)  {
 //Updates task
 app.put('/v1/tasks/:id', function(req, res)  {
     var id = req.params.id;
-    var task = req.query.task;
-    var done = req.query.done;
+    var task = req.body.task;
+    var done = req.body.done;
     if (validateTask(task) && validateDone(done) && validateId(id)) {
         con.query("UPDATE tasks SET task = ?, done = ? WHERE id = ?", [task, done, id], function(err, results) {
             if (err) {
@@ -118,7 +118,7 @@ function validateId(t) {
 }
 function validateDone(d) {
     if (d != null) {
-        if (validator.isBoolean(""+d+"")) {
+        if (d === true || d == false) {
             return true;
         }
     }

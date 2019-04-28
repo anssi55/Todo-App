@@ -11,8 +11,8 @@ In the /Todo-App folder run:
 `npm install`
 
 ### Database configuration file
-In order to database work, you have to make config.json to /Todo-App/backend and fill missing information.
-Fill information like in config.example.json file found in /Todo-App/backend
+In order to database work, you have to make config.json to /Todo-App/backend.
+Fill information like in config.example.json file found in that same location.
 
 ## Running the app
 
