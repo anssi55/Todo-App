@@ -71,6 +71,7 @@ app.put('/v1/tasks/:id', function(req, res)  {
     var id = req.params.id;
     var task = req.body.task;
     var done = req.body.done;
+    var modifiedTask = {"task": task, "done": done} 
     if (validateTask(task) && validateDone(done) && validateId(id)) {
         con.query("UPDATE tasks SET task = ?, done = ? WHERE id = ?", [task, done, id], function(err, results) {
             if (err) {
@@ -79,7 +80,7 @@ app.put('/v1/tasks/:id', function(req, res)  {
             } else if (results.affectedRows == 0) {
                 res.status(404).send({message:'Task not found'});
             } else {
-                res.status(200).send({message:'Task modified successfully'});
+                res.status(200).send({message:'Task modified successfully', task: modifiedTask});
             }
         });
     } else {
