@@ -20,7 +20,7 @@ app.all('*', function(req, res, next) {
 });
 
 //Gets all notes from database
-app.get('v1/tasks', function(req, res)  {
+app.get('/v1/tasks', function(req, res)  {
     var sql = 'SELECT * FROM tasks';
 
     con.query(sql, function (err, results) {
@@ -32,7 +32,7 @@ app.get('v1/tasks', function(req, res)  {
     });
 });
 //Gets spesific task indentified by id
-app.get('v1/tasks/:id', function(req, res)  {
+app.get('/v1/tasks/:id', function(req, res)  {
     var id = req.params.id;
     if (validateId(id)) {
         con.query("SELECT * FROM tasks WHERE id = ?", id, function (err, results) {
@@ -51,7 +51,7 @@ app.get('v1/tasks/:id', function(req, res)  {
     }
 });
 //Sets a new task to database
-app.post('v1/tasks', function(req, res)  {
+app.post('/v1/tasks', function(req, res)  {
     var task = req.body.task;
     var done = req.body.done;
     if (validateTask(task) && validateDone(done)) {
@@ -67,7 +67,7 @@ app.post('v1/tasks', function(req, res)  {
     }
 });
 //Updates task
-app.put('v1/tasks/:id', function(req, res)  {
+app.put('/v1/tasks/:id', function(req, res)  {
     var id = req.params.id;
     var task = req.query.task;
     var done = req.query.done;
@@ -87,7 +87,7 @@ app.put('v1/tasks/:id', function(req, res)  {
     }
 });
 //Deletes a task indentified by id.
-app.delete('v1/tasks/:id', function(req, res)  {
+app.delete('/v1/tasks/:id', function(req, res)  {
     var id = req.params.id;
     if (validateId(id)) {
         con.query('DELETE FROM tasks WHERE id = ?', id, function(err, results) {
