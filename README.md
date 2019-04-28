@@ -3,7 +3,7 @@ Good old todo-application to set remainders for your daily life.
 
 This version contains only backend-part of the app.
 
-Backend have been build by using node.js express framework
+Backend have been build by using node.js express framework.
 
 ## Installation
 
@@ -11,7 +11,7 @@ In the /Todo-App folder run:
 `npm install`
 
 ### Database configuration file
-In order to database work, you have to make config.json and fill missing information in found in /Todo-App/backend
+In order to database work, you have to make config.json to /Todo-App/backend and fill missing information.
 Fill information like in config.example.json file found in /Todo-App/backend
 
 ## Running the app

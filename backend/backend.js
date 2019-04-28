@@ -54,7 +54,6 @@ app.get('/v1/tasks/:id', function(req, res)  {
 app.post('/v1/tasks', function(req, res)  {
     var task = req.body.task;
     var done = req.body.done;
-    console.log(task);
     if (validateTask(task) && validateDone(done)) {
         con.query('INSERT INTO tasks(task, done) VALUES(?, ?)', [task, done], function(err, results) {
             if (err) {
