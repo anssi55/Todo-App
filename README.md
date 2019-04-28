@@ -10,13 +10,16 @@ Backend have been build by using node.js express framework
 In the /Todo-App folder run:  
 `npm install`
 
+### Database configuration file
+In order to database work, you have to make config.json and fill missing information in found in /Todo-App/backend
+Fill information like in config.example.json file found in /Todo-App/backend
+
 ## Running the app
 
 In the /Todo-App/backend folder run:  
 `node backend.js`
 
-### Database configuration file
-In order to database work, you have to fill missing information in config.json found in /Todo-App/backend
+
 
 
 ## Rest-api calls

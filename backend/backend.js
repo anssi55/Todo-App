@@ -43,7 +43,7 @@ app.get('/v1/tasks/:id', function(req, res)  {
                 res.status(404).send({message:'Task not found'});
                 
             } else {
-                res.status(200).send(results);
+                res.status(200).send(results[0]);
             }
         });
     } else {
@@ -54,6 +54,7 @@ app.get('/v1/tasks/:id', function(req, res)  {
 app.post('/v1/tasks', function(req, res)  {
     var task = req.body.task;
     var done = req.body.done;
+    console.log(task);
     if (validateTask(task) && validateDone(done)) {
         con.query('INSERT INTO tasks(task, done) VALUES(?, ?)', [task, done], function(err, results) {
             if (err) {
@@ -118,7 +119,7 @@ function validateId(t) {
 }
 function validateDone(d) {
     if (d != null) {
-        if (!validator.isEmpty(d) && validator.isBoolean(d)) {
+        if (validator.isBoolean(""+d+"")) {
             return true;
         }
     }
